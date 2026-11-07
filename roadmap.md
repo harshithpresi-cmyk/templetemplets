@@ -1,4 +1,4 @@
 - [ ] Build responsive BHTCC public website and phone/tablet-friendly navigation; explicitly requested by user.
 - [ ] Add Cloud-backed sign-in, profiles, and secure role-checked admin foundation.
-- [ ] Keep payment enablement deferred; keep unverified finance and event content unpublished.
+- [x] Keep payment enablement deferred; do not create checkout or fabricate fundraising figures.
 - [ ] Run tests and inspect desktop, tablet, and mobile layouts.
