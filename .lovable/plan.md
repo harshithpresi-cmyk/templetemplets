@@ -15,7 +15,7 @@ Replace the blank starter page with a trustworthy, editorial website for Ballara
 3. Add account sign-in and use Lovable Cloud for persistence. Create profile data because the user confirmed it is needed. Keep roles in a separate protected roles table and secure `/admin` with server-validated role checks.
 4. Build an initial admin area around editable site content and community submissions, with safe publication states. Do not create or publish unconfirmed fundraising figures, membership prices, operational schedules, legal claims, or invented governance documents.
 5. Keep donations as an informational page with payment setup explicitly deferred; do not add checkout or imply donations can currently be processed online.
-6. Apply the design tokens and page-specific SEO metadata, then run the existing routing tests and inspect the public experience at desktop and mobile widths.
+6. Apply the design tokens and page-specific SEO metadata, then run the existing routing tests and inspect the public experience at desktop (1280px), tablet (768px), and mobile (390px and 360px) widths. Navigation, reading layouts, forms, and actions must remain usable with touch and keyboard.
 
 ## Technical notes
 - Preserve TanStack Start and existing generated Lovable Cloud integration files.
