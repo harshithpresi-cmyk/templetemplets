@@ -10,33 +10,180 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CommunityRouteImport } from './routes/community'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DonationsRouteImport } from './routes/donations'
+import { Route as EventsRouteImport } from './routes/events'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as GovernanceRouteImport } from './routes/governance'
+import { Route as MembershipRouteImport } from './routes/membership'
+import { Route as OurStoryRouteImport } from './routes/our-story'
+import { Route as TempleProjectRouteImport } from './routes/temple-project'
+import { Route as VolunteerRouteImport } from './routes/volunteer'
+import { Route as WorshipRouteImport } from './routes/worship'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CommunityRoute = CommunityRouteImport.update({
+  id: '/community',
+  path: '/community',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DonationsRoute = DonationsRouteImport.update({
+  id: '/donations',
+  path: '/donations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GovernanceRoute = GovernanceRouteImport.update({
+  id: '/governance',
+  path: '/governance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MembershipRoute = MembershipRouteImport.update({
+  id: '/membership',
+  path: '/membership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurStoryRoute = OurStoryRouteImport.update({
+  id: '/our-story',
+  path: '/our-story',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TempleProjectRoute = TempleProjectRouteImport.update({
+  id: '/temple-project',
+  path: '/temple-project',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VolunteerRoute = VolunteerRouteImport.update({
+  id: '/volunteer',
+  path: '/volunteer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorshipRoute = WorshipRouteImport.update({
+  id: '/worship',
+  path: '/worship',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/community': typeof CommunityRoute
+  '/contact': typeof ContactRoute
+  '/donations': typeof DonationsRoute
+  '/events': typeof EventsRoute
+  '/gallery': typeof GalleryRoute
+  '/governance': typeof GovernanceRoute
+  '/membership': typeof MembershipRoute
+  '/our-story': typeof OurStoryRoute
+  '/temple-project': typeof TempleProjectRoute
+  '/volunteer': typeof VolunteerRoute
+  '/worship': typeof WorshipRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/community': typeof CommunityRoute
+  '/contact': typeof ContactRoute
+  '/donations': typeof DonationsRoute
+  '/events': typeof EventsRoute
+  '/gallery': typeof GalleryRoute
+  '/governance': typeof GovernanceRoute
+  '/membership': typeof MembershipRoute
+  '/our-story': typeof OurStoryRoute
+  '/temple-project': typeof TempleProjectRoute
+  '/volunteer': typeof VolunteerRoute
+  '/worship': typeof WorshipRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/community': typeof CommunityRoute
+  '/contact': typeof ContactRoute
+  '/donations': typeof DonationsRoute
+  '/events': typeof EventsRoute
+  '/gallery': typeof GalleryRoute
+  '/governance': typeof GovernanceRoute
+  '/membership': typeof MembershipRoute
+  '/our-story': typeof OurStoryRoute
+  '/temple-project': typeof TempleProjectRoute
+  '/volunteer': typeof VolunteerRoute
+  '/worship': typeof WorshipRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/community'
+    | '/contact'
+    | '/donations'
+    | '/events'
+    | '/gallery'
+    | '/governance'
+    | '/membership'
+    | '/our-story'
+    | '/temple-project'
+    | '/volunteer'
+    | '/worship'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/community'
+    | '/contact'
+    | '/donations'
+    | '/events'
+    | '/gallery'
+    | '/governance'
+    | '/membership'
+    | '/our-story'
+    | '/temple-project'
+    | '/volunteer'
+    | '/worship'
+  id:
+    | '__root__'
+    | '/'
+    | '/community'
+    | '/contact'
+    | '/donations'
+    | '/events'
+    | '/gallery'
+    | '/governance'
+    | '/membership'
+    | '/our-story'
+    | '/temple-project'
+    | '/volunteer'
+    | '/worship'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CommunityRoute: typeof CommunityRoute
+  ContactRoute: typeof ContactRoute
+  DonationsRoute: typeof DonationsRoute
+  EventsRoute: typeof EventsRoute
+  GalleryRoute: typeof GalleryRoute
+  GovernanceRoute: typeof GovernanceRoute
+  MembershipRoute: typeof MembershipRoute
+  OurStoryRoute: typeof OurStoryRoute
+  TempleProjectRoute: typeof TempleProjectRoute
+  VolunteerRoute: typeof VolunteerRoute
+  WorshipRoute: typeof WorshipRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +195,99 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/community': {
+      id: '/community'
+      path: '/community'
+      fullPath: '/community'
+      preLoaderRoute: typeof CommunityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/donations': {
+      id: '/donations'
+      path: '/donations'
+      fullPath: '/donations'
+      preLoaderRoute: typeof DonationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/governance': {
+      id: '/governance'
+      path: '/governance'
+      fullPath: '/governance'
+      preLoaderRoute: typeof GovernanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/membership': {
+      id: '/membership'
+      path: '/membership'
+      fullPath: '/membership'
+      preLoaderRoute: typeof MembershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-story': {
+      id: '/our-story'
+      path: '/our-story'
+      fullPath: '/our-story'
+      preLoaderRoute: typeof OurStoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/temple-project': {
+      id: '/temple-project'
+      path: '/temple-project'
+      fullPath: '/temple-project'
+      preLoaderRoute: typeof TempleProjectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/volunteer': {
+      id: '/volunteer'
+      path: '/volunteer'
+      fullPath: '/volunteer'
+      preLoaderRoute: typeof VolunteerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/worship': {
+      id: '/worship'
+      path: '/worship'
+      fullPath: '/worship'
+      preLoaderRoute: typeof WorshipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CommunityRoute: CommunityRoute,
+  ContactRoute: ContactRoute,
+  DonationsRoute: DonationsRoute,
+  EventsRoute: EventsRoute,
+  GalleryRoute: GalleryRoute,
+  GovernanceRoute: GovernanceRoute,
+  MembershipRoute: MembershipRoute,
+  OurStoryRoute: OurStoryRoute,
+  TempleProjectRoute: TempleProjectRoute,
+  VolunteerRoute: VolunteerRoute,
+  WorshipRoute: WorshipRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
